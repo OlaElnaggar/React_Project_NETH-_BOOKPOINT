@@ -23,7 +23,7 @@ export default function CardCart({ product }: CardBookProps) {
     return (
         <Card
             sx={{
-                width: "264px",
+                // width: "264px",
                 display: "flex",
                 flexDirection: "column",
                 pb: 2,
@@ -58,8 +58,8 @@ export default function CardCart({ product }: CardBookProps) {
                     image={product.image}
                     alt={product.title}
                     sx={{
-                        width: "145px",
-                        height: "210px",
+                        width: { xs: "120px", sm: "145px" },
+                        height: { xs: "175px", sm: "210px" },
                         objectFit: "cover",
                         borderRadius: "6px",
                         boxShadow: "0 4px 12px rgba(0,0,0,0.15)",

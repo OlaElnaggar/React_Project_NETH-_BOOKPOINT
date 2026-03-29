@@ -30,7 +30,7 @@ function Shop() {
   });
 
   return (
-    <Container maxWidth="xl" sx={{ margin: "auto", py: "100px" }}>
+    <Container maxWidth="lg" sx={{ margin: "auto", py: "100px" }} >
       <Typography
         variant="h3"
         color="secondary"
@@ -57,6 +57,7 @@ function Shop() {
         flexWrap: "wrap",
         gap: 1,
         justifyContent: "center",
+        alignItems:"center",
         mb: 4,
         px: 2,
       }}>
@@ -98,10 +99,10 @@ function Shop() {
       </Box>
 
       
-      <Grid container spacing={3} sx={{ p: 1 }} justifyContent="center">
+<Grid container spacing={5} sx={{ px: { xs: 1, sm: 2, md: 3 }, py: 1 }} alignContent="stretch" >
         {loading ? (
-          Array.from({ length: 8 }).map((_, idx) => (
-            <Grid key={idx} item xs={12} sm={6} md={4} lg={3}>
+Array.from({ length: 8 }).map((_, idx) => (
+            <Grid key={idx} size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }} >
               <Box sx={{ borderRadius: "12px", overflow: "hidden", p: 2, border: "1px solid #eee" }}>
                 <Skeleton variant="rectangular" width="100%" height={200} sx={{ borderRadius: "8px" }} />
                 <Skeleton variant="text" sx={{ mt: 1 }} />
@@ -111,8 +112,8 @@ function Shop() {
             </Grid>
           ))
         ) : filtered.length > 0 ? (
-          filtered.map((product, idx) => (
-            <Grid key={product.id} item xs={12} sm={6} md={4} lg={3} sx={{
+filtered.map((product, idx) => (
+            <Grid key={product.id} size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }} sx={{
               animation: `fadeInUp 0.4s ease both`,
               animationDelay: `${idx * 0.05}s`,
               "@keyframes fadeInUp": {
@@ -124,7 +125,7 @@ function Shop() {
             </Grid>
           ))
         ) : (
-          <Grid item xs={12}>
+          <Grid size={{xs:12 }}>
             <Typography variant="h6" color="textSecondary" align="center">
               No books found for "{activeFilter !== "All" ? activeFilter : urlSearch}".
             </Typography>

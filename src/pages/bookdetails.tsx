@@ -32,10 +32,10 @@ export default function Bookdetails() {
     if (loading) return (
         <Container maxWidth="lg" sx={{ pt: "120px", pb: 6 }}>
             <Grid container spacing={4}>
-                <Grid item xs={12} md={5}>
+                <Grid size={{xs:12 , md:5}} >
                     <Skeleton variant="rectangular" height={400} sx={{ borderRadius: "12px" }} />
                 </Grid>
-                <Grid item xs={12} md={7}>
+                <Grid size={{xs:12, md:7}} >
                     <Skeleton variant="text" height={60} />
                     <Skeleton variant="text" width="50%" />
                     <Skeleton variant="text" sx={{ mt: 2 }} />
@@ -68,7 +68,7 @@ export default function Bookdetails() {
 
                 <Grid container spacing={5}>
 
-                    <Grid item xs={12} md={5}>
+                    <Grid size={{xs:12 , md:5}}>
                         <Box sx={{
                             borderRadius: "16px",
                             overflow: "hidden",
@@ -100,7 +100,7 @@ export default function Bookdetails() {
                     </Grid>
 
 
-                    <Grid item xs={12} md={7} sx={{
+                    <Grid size={{xs:12 , md:7}} sx={{
                         animation: "slideIn 0.5s ease both",
                         "@keyframes slideIn": { from: { opacity: 0, transform: "translateX(20px)" }, to: { opacity: 1, transform: "translateX(0)" } },
                     }}>

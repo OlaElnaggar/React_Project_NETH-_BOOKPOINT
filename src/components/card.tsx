@@ -23,7 +23,7 @@ export default function CardBook({ product }: CardBookProps) {
         <Card
             sx={{
                 height: "100%",
-                width: "264px",
+                // width: "264px",
                 display: "flex",
                 flexDirection: "column",
                 pb: 2,
@@ -105,8 +105,8 @@ export default function CardBook({ product }: CardBookProps) {
                 startIcon={<ShoppingCartIcon sx={{ fontSize: 16 }} />}
                 sx={{
                     mx: "auto",
-                    textTransform: "capitalize",
-                    width: "169px",
+                textTransform: "capitalize",
+                    width: { xs: "150px", sm: "169px" },
                     height: "34px",
                     color: "#000",
                     borderRadius: "8px",

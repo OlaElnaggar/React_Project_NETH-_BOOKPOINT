@@ -105,11 +105,11 @@ export default function Cart() {
 
                 {cart.length > 0 ? (
                     <>
-                        <Grid container spacing={3} justifyContent="center">
+<Grid container spacing={4} justifyContent="center">
                             {cart.map((product, idx) => (
                                 <Grid
-                                    key={product.id}
-                                    item xs={12} sm={6} md={4} lg={3}
+key={product.id}
+                                    size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
                                     sx={{
                                         animation: "fadeInUp 0.4s ease both",
                                         animationDelay: `${idx * 0.08}s`,
@@ -219,7 +219,7 @@ export default function Cart() {
                                     const fieldName = field.name as keyof CheckoutFormData;
                                     const errorMsg  = errors[fieldName]?.message;
                                     return (
-                                        <Grid item xs={12} sm={6} key={field.name}>
+                                        <Grid size={{xs:12 , sm:6}}  key={field.name}>
                                             <TextField
                                                 
                                                 {...register(fieldName)}
@@ -262,7 +262,7 @@ export default function Cart() {
                             </Box>
 
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm={6}>
+                                <Grid size={{xs:12 , sm:6}}>
                                     <Button
                                         fullWidth
                                         type="submit"          
@@ -273,7 +273,7 @@ export default function Cart() {
                                         Pay Now
                                     </Button>
                                 </Grid>
-                                <Grid item xs={12} sm={6}>
+                                <Grid size={{xs:12,sm:6}} >
                                     <Button
                                         fullWidth
                                         variant="outlined"
@@ -293,7 +293,7 @@ export default function Cart() {
                                 *Contact us to cancel your order
                             </Typography>
                         </Box>
-                        // ─────────────────────────────────────────────────────
+                        
                     )}
                 </DialogContent>
             </Dialog>

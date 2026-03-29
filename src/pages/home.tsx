@@ -169,12 +169,9 @@ function Home() {
                         <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} justifyContent="center">
                             {currentBooks.map((book) => (
                                 <Grid
-                                    item
                                     key={book.id}
-                                    xs={6}
-                                    sm={4}
-                                    md={3}
-                                    lg={2.4}
+                                    size={{xs:6 , sm:4 , md:3 , lg:2.4}}
+                            
                                 >
                                     <Box
                                         onClick={() => {
@@ -314,7 +311,7 @@ function Home() {
             <Box sx={{ bgcolor: "#111", py: { xs: 6, md: 8 }, px: 2 }}>
                 <Container maxWidth="lg">
                     <Grid container spacing={4} alignItems="center">
-                        <Grid item xs={12} md={5}>
+                        <Grid size={{xs:12, md:5}} >
                             <Box sx={{
                                 bgcolor: "#1a1a1a",
                                 borderRadius: "12px",
@@ -331,7 +328,7 @@ function Home() {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={7}>
+                        <Grid size={{xs:12 , md:7}} >
                             <Typography variant="h4" color="primary.main" fontWeight={400} gutterBottom>
                                 Your favourite{" "}
                                 <Box component="span" color="secondary.main" fontWeight={700}>Reads</Box>
@@ -350,7 +347,7 @@ function Home() {
                                     { value: 1000, suffix: "+", label: "Registered Members" },
                                     { value: 50, suffix: "+", label: "Branch Count" },
                                 ].map((stat) => (
-                                    <Grid item xs={4} key={stat.label}>
+                                    <Grid size={{xs:4}}  key={stat.label}>
                                         <Typography variant="h5" color="secondary.main" fontWeight={700}>
                                             <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                                         </Typography>
